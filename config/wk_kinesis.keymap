@@ -14,6 +14,37 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        alt_tab_behavior: alt_tab_behavior {
+            compatible = "zmk,behavior-sticky-key";
+            label = "ALT_TAB_BEHAVIOR";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <500>;
+        };
+
+        win_v_or_win_or_smile: win_v_or_win_or_smile {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_V_OR_WIN_OR_SMILE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN>, <&kp LG(V)>, <&kp LG(DOT)>;
+        };
+    };
+
+    macros {
+        alttabnew: alttabnew {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &alt_tab_behavior MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "ALTTABNEW";
+        };
     };
 
     combos {
