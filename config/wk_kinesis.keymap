@@ -82,11 +82,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans           &trans             &trans         &trans  &trans                                                               &trans             &trans                         &trans        &trans                   &trans           &trans
-&trans  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans         &trans  &kp LS(HOME)                                                         &kp LS(END)        &alttabnew LA(LEFT_SHIFT) TAB  &kp UP_ARROW  &alttabnew LEFT_ALT TAB  &kp PRINTSCREEN  &trans
-&trans  &trans           &trans             &kp LC(LS(D))  &trans  &kp HOME                 &trans  &trans      &trans  &trans          &kp END            &kp LEFT                       &kp DOWN      &kp RIGHT                &trans           &trans
-&trans  &trans           &kp LS(MINUS)      &trans         &trans  &kp LS(LC(LEFT))                 &trans      &trans                  &kp LC(LS(RIGHT))  &trans                         &trans        &kp LS(EQUAL)            &trans           &bootloader
-        &trans           &trans             &trans         &trans                    &mo 3  &trans  &trans      &trans  &trans  &trans                     &trans                         &trans        &trans                   &trans
+&trans  &trans           &trans             &trans         &trans  &trans                                                               &trans             &trans                       &trans        &trans                   &trans           &trans
+&trans  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans         &trans  &kp LS(HOME)                                                         &kp LS(END)        &alttabnew LEFT_ALT LS(TAB)  &kp UP_ARROW  &alttabnew LEFT_ALT TAB  &kp PRINTSCREEN  &trans
+&trans  &trans           &trans             &kp LC(LS(D))  &trans  &kp HOME                 &trans  &trans      &trans  &trans          &kp END            &kp LEFT                     &kp DOWN      &kp RIGHT                &trans           &trans
+&trans  &trans           &kp LS(MINUS)      &trans         &trans  &kp LS(LC(LEFT))                 &trans      &trans                  &kp LC(LS(RIGHT))  &trans                       &trans        &kp LS(EQUAL)            &trans           &bootloader
+        &trans           &trans             &trans         &trans                    &mo 3  &trans  &trans      &trans  &trans  &trans                     &trans                       &trans        &trans                   &trans
             >;
         };
 
