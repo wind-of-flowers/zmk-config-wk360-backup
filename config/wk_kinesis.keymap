@@ -35,7 +35,6 @@
             label = "STICKY_SHIFT_QUICK";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <1000>;
             quick-release;
         };
     };
