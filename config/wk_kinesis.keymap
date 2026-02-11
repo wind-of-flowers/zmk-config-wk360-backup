@@ -29,6 +29,15 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN>, <&kp LG(V)>, <&kp LG(DOT)>;
         };
+
+        sticky_shift_quick: sticky_shift_quick {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_SHIFT_QUICK";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
     };
 
     macros {
@@ -63,11 +72,10 @@
         };
 
         stickyshift {
-            bindings = <&sk LEFT_SHIFT>;
+            bindings = <&sticky_shift_quick LEFT_SHIFT>;
             key-positions = <19 20>;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
