@@ -74,6 +74,7 @@
         stickyshift {
             bindings = <&sticky_shift_quick LEFT_SHIFT>;
             key-positions = <19 20>;
+            timeout-ms = <5000>;
         };
     };
 
