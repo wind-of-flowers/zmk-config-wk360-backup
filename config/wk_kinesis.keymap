@@ -39,20 +39,6 @@
             release-after-ms = <500>;
         };
 
-        minus: minus {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MINUS";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp LS(MINUS)>;
-        };
-
-        plus: plus {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PLUS";
-            #binding-cells = <0>;
-            bindings = <&kp PLUS>, <&kp EQUAL>;
-        };
-
         tilda: tilda {
             compatible = "zmk,behavior-tap-dance";
             label = "TILDA";
@@ -105,11 +91,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&tilda            &kp N1           &kp N2             &kp N3        &kp N4    &kp N5                                                                                         &kp N6  &kp N7    &kp N8     &kp N9       &kp N0               &kp BACKSPACE
-&kp TAB           &kp Q            &kp W              &kp E         &kp R     &kp T                                                                                          &kp Y   &kp U     &kp I      &kp O        &kp P                &mt RIGHT_BRACKET LEFT_BRACKET
-&kp LEFT_CONTROL  &kp A            &kp S              &kp D         &kp F     &kp G              &minus   &plus           &kp HOME      &kp END                              &kp H   &kp J     &kp K      &kp L        &kp SEMI             &kp SQT
-&kp LSHFT         &kp Z            &kp X              &kp C         &kp V     &kp B                       &mo 1           &mo 2                                              &kp N   &kp M     &kp COMMA  &kp DOT      &mt BACKSLASH SLASH  &kp LC(Z)
-                  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp UP_ARROW  &kp DOWN          &kp SPACE  &kp DEL  &kp ESCAPE      &kp LEFT_WIN  &kp BACKSPACE  &mt LEFT_SHIFT ENTER          &kp LEFT  &kp RIGHT  &kp PAGE_UP  &kp PAGE_DOWN
+&tilda            &kp N1           &kp N2             &kp N3        &kp N4    &kp N5                                                                                                                           &kp N6  &kp N7    &kp N8     &kp N9       &kp N0               &kp BACKSPACE
+&kp TAB           &kp Q            &kp W              &kp E         &kp R     &kp T                                                                                                                            &kp Y   &kp U     &kp I      &kp O        &kp P                &mt RIGHT_BRACKET LEFT_BRACKET
+&kp LEFT_CONTROL  &kp A            &kp S              &kp D         &kp F     &kp G              &mt LS(MINUS) MINUS  &mt EQUAL LS(EQUAL)      &kp HOME                   &kp END                              &kp H   &kp J     &kp K      &kp L        &kp SEMI             &kp SQT
+&kp LSHFT         &kp Z            &kp X              &kp C         &kp V     &kp B                                   &mo 1                    &mo 2                                                           &kp N   &kp M     &kp COMMA  &kp DOT      &mt BACKSLASH SLASH  &kp LC(Z)
+                  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp UP_ARROW  &kp DOWN          &kp SPACE  &kp DEL              &kp ESCAPE               &mt LEFT_WIN LS(QUESTION)  &kp BACKSPACE  &mt LEFT_SHIFT ENTER          &kp LEFT  &kp RIGHT  &kp PAGE_UP  &kp PAGE_DOWN
             >;
         };
 
